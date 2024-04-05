@@ -34,7 +34,12 @@ export class LogEntity {
     const { message, level, createdAt, origin } = JSON.parse(json);
 
     // if (message && level) {
-      const log = new LogEntity({ message, level, origin, createdAt });
+      const log = new LogEntity({
+        message,
+        level,
+        origin,
+        createdAt: new Date(createdAt)
+      });
       return log;
     // }
 
