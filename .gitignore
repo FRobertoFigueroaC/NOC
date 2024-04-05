@@ -1,10 +1,6 @@
 node_modules/
 dist/
 logs/
-mongo/
-postgres/
-mongo-test/
-postgres-test/
 coverage/
 
 # logs
@@ -12,3 +8,9 @@ coverage/
 
 .env
 .env.test
+
+
+mongo/*
+postgres/*
+mongo-test/*
+postgres-test/*
