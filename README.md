@@ -14,4 +14,6 @@ MAILER_SECRET_KEY=123456
 PROD=false
 ```
 3. Excute the ```npm install``` comand
-3. Execute the  ```npm run start``` to start the application
+4. Create the databases (MongoDb & Postgres) with ```docker compose up -d``` comand
+5. Excute the ```npx prisma migrate dev``` comand
+6. Execute ```npm run dev```

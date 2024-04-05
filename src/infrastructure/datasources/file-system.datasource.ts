@@ -53,6 +53,8 @@ export class FileSystemDataSourcetemDataSource implements LogDatasource {
       fs.appendFileSync( this.highLogsPath, logAsJson );
     }
 
+    console.log('File System Log created');
+
   }
 
 
