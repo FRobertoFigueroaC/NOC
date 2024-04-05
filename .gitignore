@@ -3,8 +3,12 @@ dist/
 logs/
 mongo/
 postgres/
+mongo-test/
+postgres-test/
+coverage/
 
 # logs
 .DS_Store
 
 .env
+.env.test
