@@ -102,4 +102,17 @@ describe('file-system.datasource test', () => {
     expect(highLogs).toContain(JSON.stringify(logHigh));
 
   });
+
+  test('should throw an error if severity level is not defined', async() => {
+    const logDataSource = new FileSystemDataSource();
+    const customSeverityLevel = 'MOCK_LEVEL' as LogSeverityLevel;
+    try {
+      await logDataSource.getLogs(customSeverityLevel);
+      expect(true).toBeFalsy();
+    } catch (error) {
+      const errorString = `${error}`;
+      expect(errorString).toContain(`${customSeverityLevel} not implemented`);
+      expect(true).toBeTruthy();
+    }
+  });
 });
