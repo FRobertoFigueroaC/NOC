@@ -4,7 +4,7 @@ import { LogDatasource } from '../../domain/datasources/log.datasource';
 import { LogEntity, LogSeverityLevel } from '../../domain/entities/log.entity';
 
 
-export class FileSystemDataSourcetemDataSource implements LogDatasource {
+export class FileSystemDataSource implements LogDatasource {
 
   private readonly logPath = 'logs/';
   private readonly allLogsPath = 'logs/logs-low.log';
@@ -56,7 +56,6 @@ export class FileSystemDataSourcetemDataSource implements LogDatasource {
     console.log('File System Log created');
 
   }
-
 
 
   async getLogs( severityLevel: LogSeverityLevel ): Promise<LogEntity[]> {

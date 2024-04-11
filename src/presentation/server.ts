@@ -3,7 +3,7 @@ import { LogSeverityLevel } from '../domain/entities/log.entity';
 import { CheckService } from "../domain/use-cases/checks/check-service";
 import { CheckServiceMultiple } from '../domain/use-cases/checks/check-service-multiple';
 import { SendEmailLogs } from '../domain/use-cases/email/send-email-logs';
-import { FileSystemDataSourcetemDataSource } from '../infrastructure/datasources/file-system.datasource';
+import { FileSystemDataSource } from '../infrastructure/datasources/file-system.datasource';
 import { MongoLogDatasource } from '../infrastructure/datasources/mongo-log.datasource';
 import { PostgresLogDatasource } from '../infrastructure/datasources/postgres-log.datasource';
 import { LogRepositoryImpl } from '../infrastructure/repositories/log.repository.impl';
@@ -13,13 +13,13 @@ import { EmailService } from './email/email-service';
 
 // Single
 // const logRepository = new LogRepositoryImpl(
-//   // new FileSystemDataSourcetemDataSource()
+//   // new FileSystemDataSource()
 //   // new MongoLogDatasource()
 //   new PostgresLogDatasource()
 // );
 
 // Multiple
-const fsRepository = new LogRepositoryImpl(new FileSystemDataSourcetemDataSource() );
+const fsRepository = new LogRepositoryImpl(new FileSystemDataSource() );
 const mongoRepository = new LogRepositoryImpl(new MongoLogDatasource() );
 const postgresRepository = new LogRepositoryImpl(new PostgresLogDatasource() );
 
